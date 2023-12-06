@@ -52,9 +52,6 @@ class Assistant:
             return "Desculpe, não consegui gerar uma resposta neste momento."
 
     def traduzir_para_idioma_usuario(self, texto):
-        # Você pode usar uma API ou biblioteca de tradução para traduzir o texto para o idioma do usuário
-        # Para simplificar, vamos assumir uma função básica de tradução para fins de demonstração.
-        # Em um cenário real, você pode querer usar uma API de tradução dedicada.
         traducao = f"Tradução para {self.user_language}: {texto}"
         return traducao
 
@@ -64,8 +61,7 @@ class Assistant:
             entrada = self.ouvir_entrada()
 
             if entrada:
-                # Você pode adicionar lógica aqui para detectar e definir o idioma preferido do usuário
-                self.user_language = entrada.lower()  # Assumindo que o usuário menciona o idioma que deseja aprender
+                self.user_language = entrada.lower()
                 print(f"Assistente: Ótimo! Vamos começar a aprender {self.user_language.capitalize()}. qual fraze quer aprender hoje?")
                 break
     def reproduzir_resposta(self, resposta):
@@ -80,7 +76,6 @@ class Assistant:
             with open("output.mp3", "wb") as f:
                 f.write(audio_content)
 
-            # Código específico do sistema para reprodução de áudio
             if os.name == 'posix':  # macOS
                 os.system('open output.mp3')
             elif os.name == 'nt':   # Windows
@@ -111,9 +106,6 @@ class Assistant:
 
         
     def traduzir_para_idioma_usuario(self, texto):
-        # Você pode usar uma API ou biblioteca de tradução para traduzir o texto para o idioma do usuário
-        # Para simplificar, vamos assumir uma função básica de tradução para fins de demonstração.
-        # Em um cenário real, você pode querer usar uma API de tradução dedicada.
         traducao = f"Tradução para {self.user_language}: {texto}"
         return traducao
 

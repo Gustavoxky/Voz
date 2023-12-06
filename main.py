@@ -1,5 +1,3 @@
-# arquivo_principal.py
-
 from assistente import Assistant
 from dotenv import load_dotenv
 load_dotenv()
@@ -10,7 +8,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-main.py
 
